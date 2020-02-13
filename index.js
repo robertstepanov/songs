@@ -7,7 +7,7 @@ const server = express();
 server.use(express.json());
 
 server.get('/', (req, res) => {
-  const songs = [ { id: 1, name: 'Final Countdown'}];
+  const songs = [ { id: 1, name: 'Final Countdown', secret: process.env.SECRET}];
 
   res.status(200).json(songs);
 })
